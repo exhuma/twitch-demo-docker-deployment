@@ -1,0 +1,15 @@
+[project]
+name = "demo-fastapi"
+version = "0.0.1"
+dependencies = [
+    "fastapi",
+]
+
+[project.optional-dependencies]
+dev = [
+    "uvicorn"
+]
+
+[build-system]
+requires = ["setuptools"]
+build-backend = "setuptools.build_meta"
