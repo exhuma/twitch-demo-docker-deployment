@@ -1,0 +1,17 @@
+---
+version: "3"
+services:
+  app1:
+    build: .
+    environment:
+      - INSTANCE_ID=app1
+  app2:
+    build: .
+    environment:
+      - INSTANCE_ID=app2
+  nginx:
+    image: nginx
+    volumes:
+      - ./default.conf:/etc/nginx/conf.d/default.conf:ro
+    ports:
+      - "80:80"
